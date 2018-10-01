@@ -1,0 +1,18 @@
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Henry Antonio','Mendoza Puerta','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Vives','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');
+INSERT INTO teachers (first_name,last_name,biography,skills_summary) VALUES('Luis','Canaval','Ingeniero Software','Developer');

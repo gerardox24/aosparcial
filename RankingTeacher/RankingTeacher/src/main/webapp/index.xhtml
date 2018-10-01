@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+
+	<ui:composition template="/WEB-INF/templates/master.xhtml">
+
+		<ui:define name="content">
+			<h:form id="frm">
+
+				<h:panelGrid columns="1">
+					<p:outputLabel for="txtStudentTiu" value="Tiu" />
+					<p:inputText id="txtStudentTiu"
+						value="#{qualificationController.qualification.studentTiu}"
+						required="true" />
+					<h:column />
+				</h:panelGrid>
+
+				<p:dataTable id="tableTeachers" var="t"
+					value="#{qualificationController.teachers}" rowKey="#{t.id}"
+					selection="#{qualificationController.teacherSelection}"
+					selectionMode="single" rows="10" paginator="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					rowsPerPageTemplate="5,10,15">
+					<p:column headerText="Id">
+						<h:outputText value="#{t.id}" />
+					</p:column>
+
+					<p:column headerText="FirstName">
+						<h:outputText value="#{t.firstName}" />
+					</p:column>
+
+					<p:column headerText="LastName">
+						<h:outputText value="#{t.lastName}" />
+					</p:column>
+
+
+				</p:dataTable>
+
+				<br />
+				<h:panelGrid columns="1">
+					<p:outputLabel value="Level" for="cboLevel" />
+
+					<p:selectOneMenu id="cboLevel"
+						value="#{qualificationController.qualification.level}">
+						<f:selectItems value="#{qualificationController.levels}"
+							var="level" itemLabel="#{level.name}" itemValue="#{level}" />
+
+					</p:selectOneMenu>
+				</h:panelGrid>
+				<br />
+
+				<h:panelGrid columns="2">
+					<p:commandButton id="btnQualification" value="Qualification"
+						ajax="false"
+						action="#{qualificationController.saveQualificationTeacher()}" />
+					<p:commandButton value="Score"
+						action="#{qualificationController.goListScoreTeacher()}"
+						oncomplete="PF('wdlg').show()" update="frm:dlg" />
+				</h:panelGrid>
+
+				<br />
+
+
+				
+
+
+				<p:dialog id="dlg" header="Score Teacher" widgetVar="wdlg"
+					modal="true" resizable="false" draggable="true"
+					closeOnEscape="true">
+					<h:panelGrid columns="2">
+						<h:form>
+							<p:dataTable id="tableTeachers" var="q"
+								value="#{qualificationController.scoreTeachers}" rows="10"
+								paginator="true"
+								paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								rowsPerPageTemplate="5,10,15">
+								<p:column>
+									<h:outputText value="#{q.key.lastName}" />
+								</p:column>
+								<p:column>
+									<h:outputText value="#{q.value}" />
+								</p:column>
+							</p:dataTable>
+						</h:form>
+					</h:panelGrid>
+				</p:dialog>
+
+				<p:messages id="messages" showDetail="false" autoUpdate="true" />
+				
+
+			</h:form>
+
+		</ui:define>
+
+	</ui:composition>
+
+</body>
+</html>
